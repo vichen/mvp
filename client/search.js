@@ -1,24 +1,15 @@
-var app = angular.module("search", []);
+var app = angular.module('mvp.search', [])
+  .controller('SearchController', function($scope, Search) {
+    $scope.products = [];
 
-app.filter('searchFor', function() {
-  return function(arr, searchString) {
-    if (!searchString) {
-      return arr;
+    var initializeProducts = function(query) {
+      Search.getProducts(query)
+        .then(function(products) {
+          $scope.products = products;
+        })
+        .catch(function(error) {
+          console.error(error);
+        })
     }
 
-    var result = [];
-
-    searchString = searchString.toLowerCase();
-
-    angular.forEach(arr, function(item) {
-      if(item.title.toLowerCase().indexOf(searchString) !== -1) {
-        result.push(item);
-      }
-    });
-    return result;
-  }
-});
-
-function searchController($scope) {
-  
-}
+  });
