@@ -19,26 +19,36 @@ Once the project moves into development, the press release can be used as a touc
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
 
+
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  Crowd sourcing for forwarding international online shopping purchases.
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  Customers in China can shop on US websites through our app. You can fulfill requests and make 20% of the purchase price. You make money. They save money.
 
 ## Problem ##
   > Describe the problem your product solves.
+  Brand recognition in China is huge. Brands we consider ubiquitous and relatively mid-market such as Ralph Lauren, Tommy Hilfiger, and Coach can cost up to 3x as much in China. This app will allow customers in China to shop for brands they recognize and save money, while allowing US users to make money off of forwarding these products for them.
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
+  Customers fill out a form with the products they want to buy. The app will calculate the cost and shipping, then direct them to a payment page. The request is sent to a user in the US. They buy the product, then send it out via UPS.
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
 
+
 ## How to Get Started ##
   > Describe how easy it is to get started.
+  "Sign up is easy and takes 5 minutes to get started.""
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  "I made $200 forwarding products last week. "
+  
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+  "Sign up here today."

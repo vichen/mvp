@@ -1,0 +1,19 @@
+{
+  "name": "2016-02-mvp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vichen/2016-02-mvp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vichen/2016-02-mvp/issues"
+  },
+  "homepage": "https://github.com/vichen/2016-02-mvp#readme"
+}
