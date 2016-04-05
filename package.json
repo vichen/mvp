@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/vichen/2016-02-mvp/issues"
   },
-  "homepage": "https://github.com/vichen/2016-02-mvp#readme"
+  "homepage": "https://github.com/vichen/2016-02-mvp#readme",
+  "dependencies": {
+    "angular": "^1.5.3",
+    "angular-resource": "^1.5.3",
+    "express": "^4.13.4",
+    "jquery": "^2.2.2"
+  }
 }
