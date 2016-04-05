@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html ng-app='productSearch'>
+  
   <head>
     <title>Product Search</title>
   </head>
   <body>
-    <h1>Product Search</h1>
-    <div class="bar">
-      <input type="text" ng-model="searchQuery" placeholder="Search for a product"/>
+    <div class="page-wrapper" ng-controller="SearchController">
+      <h1>Product Search</h1>
+      <div class="bar">
+        <input type="text" ng-model="searchQuery" placeholder="Search for a product"/>
+        <button ng-click="search(searchQuery)">search</button>
+      </div>
+
+      <div class="product" ng-repeat="product in products">
+        <a href="{{product.url}}">
+          <img src="{{product.image_urls['91x121'].url}}">
+        </a>
+        <p>{{product.name}}</p>
+      </div>
     </div>
 
-    <div class="product" ng-repeat="product in products | searchFor:searchString">
-      <a href="{{product.url}}"><img src="{{product.image_urls['91x121'].url}}"></a>
-      <p>{{product.name}}</p>
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-    <script src="../node_modules/angular-resource/angular-resource.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="./app.js"></script>
+    <script src="./searchService.js"></script>
+    <script src="./searchController.js"></script>
+    <script src="./config/gilt.js"></script>
 
   </body>
 </html>
