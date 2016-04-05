@@ -3,7 +3,7 @@ angular.module('mvp.services')
 
     var urlBase = 'https://api.gilt.com/v1/';
     var config = {
-      params: {page: 1, limit: 100}
+      params: {query: searchQuery}
     };
 
     this.getProducts = function(query) {

@@ -12,4 +12,5 @@ var app = angular.module('mvp.search', [])
         })
     }
 
+    initializeProducts(searchQuery);
   });
