@@ -1,0 +1,18 @@
+<div class="page-wrapper">
+  <h1>Product Search</h1>
+  <div class="searchBar">
+    <form>
+      
+      <input type="text" ng-model="searchQuery" placeholder="Search for a product"/>
+      <button ng-click="search(searchQuery)">Search</button>
+    </form>
+  </div>
+
+  <div class="product" ng-repeat="product in products">
+    <a ng-href="/product/{{product.id}}">
+      <img ng-src="{{product.image_urls['91x121'][0].url}}">
+      <p>{{product.name}} by {{product.brand}}</p>
+      
+    </a>
+  </div>
+</div>

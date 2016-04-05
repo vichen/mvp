@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('productSearch')
+  angular.module('app')
     .controller('SearchController', function($scope, SearchService) {
       $scope.products = [];
 
