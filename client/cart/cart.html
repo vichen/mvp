@@ -1,0 +1,12 @@
+<div class="page-wrapper">
+  <h1>Cart</h1>
+
+  <div class="product-container" ng-repeat="product in cartProducts">
+    <a ng-href="/product/{{product.id}}">
+      <img ng-src="{{product.image_urls['91x121'][0].url}}">
+      <p>{{product.name}} by {{product.brand}}</p>
+      <span>{{product.price}}</span>
+      
+    </a>
+  </div>
+</div>
