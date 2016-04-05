@@ -23,7 +23,7 @@ build/
 dist/
 
 ## API KEYS ##
-server/config/gilt.js
+client/config/gilt.js
 
 # Dependency directorys
 # Deployed apps should consider commenting these lines out:
