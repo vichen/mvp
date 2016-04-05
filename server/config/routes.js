@@ -3,7 +3,7 @@ var cartController = require('../cart/cartController.js');
 var helpers = require('./helpers.js');
 
 module.exports = function(app, express) {
-  app.get('/api/carts', cartController.getCartItems);
+  app.get('/api/carts', cartController.allCartItems);
   app.post('/api/carts', cartController.addToCart);
 
   app.use(helpers.errorLogger);
