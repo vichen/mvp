@@ -10,6 +10,9 @@
       Material: {{product.content.material}}<br>
       Origin: {{product.content.origin}}
     </p>
+    <p>Original Price: {{product.skus[0].msrp_price | currency}}</p>
+    <p>Sale Price: {{product.skus[0].sale_price | currency}}</p>
+    <p><button ng-click="add(product)">Add to cart</button></p>
 
   </div>
 </div>
