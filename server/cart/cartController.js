@@ -17,22 +17,35 @@ module.exports = {
       })
   },
 
+  getProductById: function(id) {
+      return $http.get(urlBase +'products/' + id + '/detail.json?apikey=' + GILT_API_KEY)
+        .then(function(res) {
+          return res.data; 
+        });
+  },
+
   addToCart: function(req, res, next) {
-    findItem({productId: productId})
-      .then(function(match) {
-        if (match) {
-          res.send(match)
+    var productId = req.body.id;
+    var name = req.body.name;
+    var brand = req.body.brand;
+    var size = req.body.size;
+    var price = req.body.skus[0].sale_price;
+    var img = req.body.image_urls['91x121'][0].url;
+
+    addItem({
+      id: productId,
+      name: name,
+      brand: brand,
+      size: size,
+      price: price,
+      img: img
+    })
+      .then(function(err, item) {
+        if (err) {
+          console.log(err);
+          return;
         } else {
-          return getProductById(productId);
-        }
-      })
-      .then(function(product) {
-        if (product) {
-          var newProduct = {
-            productId: product.id,
-            name: product.name,
-            brand: product.brand,
-          }
+          console.log('add item: ', item);
         }
       })
   }
