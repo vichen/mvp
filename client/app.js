@@ -10,7 +10,8 @@
       $routeProvider
         .when('/', {
           templateUrl: 'search/search.html',
-          controller: 'SearchController'
+          controller: 'SearchController',
+          reloadOnSearch: false
         })
         .when('/product/:productId', {
           templateUrl: 'product/product.html',
