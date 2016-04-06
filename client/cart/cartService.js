@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('app')
-    .service('cartService', function() {
+    .service('CartService', function($http) {
 
       this.addToCart = function(product) {
         return $http({
@@ -21,6 +21,7 @@
           url: '/api/carts'
         })
         .then(function(res) {
+          console.log('returning get cart items: ', res.data);
           return res.data;
         })
       }
