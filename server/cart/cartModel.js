@@ -2,12 +2,14 @@ var mongoose = require('mongoose');
 // var crypto = require('crypto');
 
 var CartSchema = new mongoose.Schema({
-  productId: Number,
+  id: Number,
   name: String,
   brand: String,
   size: String,
   color: String,
-  quantity: Number
+  price: Number,
+  quantity: Number,
+  img: String
 });
 
 // var createSha = function (url) {
@@ -17,9 +19,8 @@ var CartSchema = new mongoose.Schema({
 // };
 
 // CartSchema.pre('save', function (next) {
-//   var code = createSha(this.url);
-//   this.code = code;
 //   next();
 // });
+
 
 module.exports = mongoose.model('Cart', CartSchema);
