@@ -16,9 +16,13 @@
           templateUrl: 'product/product.html',
           controller: 'ProductController'
         })
-        .when('/cart/', {
+        .when('/cart', {
           templateUrl: 'cart/cart.html',
           controller: 'CartController'
+        })
+        .when('/checkout', {
+          templateUrl: 'checkout/checkout.html',
+          controller: 'CheckoutController'
         })
         .otherwise({
           redirectTo: '/'
