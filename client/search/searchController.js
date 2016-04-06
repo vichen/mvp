@@ -2,8 +2,9 @@
   'use strict';
 
   angular.module('app')
-    .controller('SearchController', function($scope, SearchService) {
+    .controller('SearchController', function($scope, $location, SearchService, CartService) {
       $scope.products = [];
+
 
       $scope.search = function(query) {
         SearchService.getProducts(query)
@@ -14,6 +15,10 @@
             console.error(error);
           })
       }
+
+      // $location.search({q: query});
+
+      $scope.add = CartService.addToCart;
   });
 
 })();

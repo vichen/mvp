@@ -10,9 +10,15 @@
 
   <div class="product" ng-repeat="product in products">
     <a ng-href="/product/{{product.id}}">
-      <img ng-src="{{product.image_urls['91x121'][0].url}}">
       <p>{{product.name}} by {{product.brand}}</p>
-      
+      <img ng-src="{{product.image_urls['91x121'][0].url}}">
     </a>
+      <br>
+      <span>Original Price: {{product.skus[0].msrp_price | currency}}</span>
+      <br>
+      <span>Sale Price: {{product.skus[0].sale_price | currency}}</span>
+      <br>
+      <button ng-click="add(product)">Add to cart</button>
+      
   </div>
 </div>
