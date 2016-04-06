@@ -4,6 +4,11 @@
     <title>Product Search</title>
   </head>
   <body>
+    <div class="nav-bar">
+      <a ng-href="/">Home</a>
+      <a ng-href="/cart">View Cart</a>
+      <a ng-href="/checkout">Checkout</a>
+    </div>
     <div ng-view></div>
     <script src="../node_modules/jquery/dist/jquery.js"></script>
     <script src="../node_modules/angular/angular.js"></script>
@@ -14,6 +19,10 @@
     <script src="./search/searchService.js"></script>
     <script src="./product/productController.js"></script>
     <script src="./product/productService.js"></script>
+    <script src="./cart/cartController.js"></script>
+    <script src="./cart/cartService.js"></script>
+    <script src="./checkout/checkoutController.js"></script>
+    <script src="./checkout/checkoutService.js"></script>
 
   </body>
 </html>
