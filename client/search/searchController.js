@@ -7,6 +7,7 @@
 
 
       $scope.search = function(query) {
+        $location.search('q', query);
         SearchService.getProducts(query)
           .then(function(products) {
             $scope.products = products;
@@ -16,8 +17,16 @@
           })
       }
 
-      // $location.search({q: query});
+      function init() {
+        var params = $location.search();
+      
+        if (params.q) {
+          $scope.search(params.q);
+        }
+        
+      }
 
+      init();
       $scope.add = CartService.addToCart;
   });
 
