@@ -1,5 +1,5 @@
 #Shopper
-Built with the MEAN stack.
+Built with the MEAN stack and Gilt API.
 Browse through a catalog of thousands of products - from clothing and accessories to home goods and furniture.
 
 ![Home](https://github.com/vichen/mvp/blob/master/screen-cast.png)
