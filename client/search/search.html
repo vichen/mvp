@@ -1,24 +1,23 @@
-<div class="page-wrapper">
-  <h1>Product Search</h1>
-  <div class="searchBar">
-    <form>
-      
-      <input type="text" ng-model="searchQuery" placeholder="Search for a product"/>
-      <button ng-click="search(searchQuery)">Search</button>
-    </form>
-  </div>
+<div class="search">
 
-  <div class="product" ng-repeat="product in products">
-    <a ng-href="/product/{{product.id}}">
-      <p>{{product.name}} by {{product.brand}}</p>
+  <form class="search-bar" ng-submit="search(searchQuery)">   
+    <input type="text" ng-model="searchQuery" placeholder="Search for products"/>
+    <button type="submit">Search</button>
+  </form>
+
+  <div class="product">
+    <div class="product-card" ng-repeat="product in products">
+      <a class="product-header" ng-href="/product/{{product.id}}">
+        <span title="{{product.name}}" class="product-title">{{product.name}}</span> 
+        <span title="{{product.brand}}" class="product-brand">{{product.brand}}</span>
+      </a>
+      <span style="flex: 1"></span>
       <img ng-src="{{product.image_urls['91x121'][0].url}}">
-    </a>
-      <br>
-      <span>Original Price: {{product.skus[0].msrp_price | currency}}</span>
-      <br>
-      <span>Sale Price: {{product.skus[0].sale_price | currency}}</span>
-      <br>
+      <div class="product-price">
+        {{product.skus[0].sale_price | currency}} 
+        <span class="product-orig-price">{{product.skus[0].msrp_price | currency}}</span>
+      </div>
       <button ng-click="add(product)">Add to cart</button>
-      
+    </div>
   </div>
 </div>
